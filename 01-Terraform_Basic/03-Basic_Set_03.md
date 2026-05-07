@@ -1,5 +1,29 @@
 **Q41) What is the difference between count and for_each?**  
 **Ans:** Count uses numbers (0, 1, 2...) while for_each uses keys from a map or set, giving you more control.
+**Example:**
+```
+resource "aws_instance" "example" {
+ for_each = {
+   dev1 = { ami = "ami-12345678", instance_type = "t2.micro" }
+   dev2 = { ami = "ami-87654321", instance_type = "t3.micro" }
+ }
+ ami = each.value.ami
+ instance_type = each.value.instance_type
+ tags = {
+   Name = each.key
+ }
+}
+```
+```
+resource "aws_instance" "example" {
+ count = 3
+ instance_type = "t2.micro"
+ ami = "ami-12345678"
+ tags = {
+   Name = "example-${count.index}"
+ }
+}
+```
 
 **Q42) What is a local value in Terraform?**  
 **Ans:** Locals are like temporary variables inside your configuration. They help simplify complex expressions.
