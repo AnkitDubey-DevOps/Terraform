@@ -1,4 +1,4 @@
-# SECTION 9 — ⭐ TIPS TO WRITE GREAT HCL CODE [VERY IMPORTANT]
+# TIPS TO WRITE GREAT HCL CODE [VERY IMPORTANT]
 
 This section is critically important. Writing clean, well-structured HCL is what separates a beginner from a professional Terraform engineer.
 
