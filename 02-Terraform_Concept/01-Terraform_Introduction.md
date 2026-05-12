@@ -1,5 +1,4 @@
 # 🚀 Terraform: Complete Guide
-## Sections 1 to 5
 
 ---
 
